@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes Vault</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- AUTH BOX -->
+<div id="authBox" class="auth-box">
+    <h2>🔐 Notes Vault</h2>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="signUp()">Sign Up</button>
+    <button onclick="signIn()">Login</button>
+</div>
+
+<!-- APP -->
+<div id="app" class="app hidden">
+    <header>
+        <h1>📒 Notes Vault</h1>
+        <div>
+            <button onclick="toggleDarkMode()">🌙</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <input type="text" id="search" placeholder="Search notes..." onkeyup="searchNotes()">
+
+    <div class="note-form">
+        <input type="text" id="title" placeholder="Note title">
+        <select id="category">
+            <option>General</option>
+            <option>School</option>
+            <option>Work</option>
+            <option>Personal</option>
+        </select>
+        <textarea id="content" placeholder="Write your note..."></textarea>
+        <button onclick="saveNote()">Save Note</button>
+    </div>
+
+    <div id="notes" class="notes-container"></div>
+</div>
+
+<!-- SUPABASE SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

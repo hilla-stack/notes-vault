@@ -1,0 +1,104 @@
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+/* AUTH */
+.auth-box {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.auth-box input,
+.auth-box button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/* APP */
+.app {
+    width: 520px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.dark .app {
+    background: #1e1e1e;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.note-form input,
+.note-form select,
+.note-form textarea,
+#search {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+}
+
+.note-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+button {
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+.notes-container {
+    margin-top: 15px;
+}
+
+.note {
+    background: #eee;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.dark .note {
+    background: #2a2a2a;
+}
+
+.note small {
+    color: gray;
+}
+
+.edit {
+    background: orange;
+    color: white;
+}
+
+.delete {
+    background: red;
+    color: white;
+}
