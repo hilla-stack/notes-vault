@@ -1,4 +1,6 @@
-
+/* ===============================
+   GLOBAL
+================================ */
 * {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
@@ -21,13 +23,19 @@ body {
     display: none;
 }
 
-/* AUTH */
+/* ===============================
+   AUTH
+================================ */
 .auth-box {
     background: white;
     padding: 20px;
     width: 300px;
     border-radius: 8px;
     text-align: center;
+}
+
+.dark .auth-box {
+    background: #1e1e1e;
 }
 
 .auth-box input,
@@ -37,7 +45,9 @@ body {
     padding: 10px;
 }
 
-/* APP */
+/* ===============================
+   APP
+================================ */
 .app {
     width: 520px;
     background: white;
@@ -55,10 +65,14 @@ header {
     align-items: center;
 }
 
+/* ===============================
+   INPUTS
+================================ */
 .note-form input,
 .note-form select,
 .note-form textarea,
-#search {
+#search,
+#categoryFilter {
     width: 100%;
     margin: 8px 0;
     padding: 10px;
@@ -69,28 +83,81 @@ header {
     resize: none;
 }
 
+/* ===============================
+   BUTTONS
+================================ */
 button {
     cursor: pointer;
     padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
 }
 
+button:hover {
+    opacity: 0.9;
+}
+
+/* ===============================
+   NOTES
+================================ */
 .notes-container {
     margin-top: 15px;
 }
 
 .note {
     background: #eee;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border-left: 4px solid transparent;
 }
 
 .dark .note {
     background: #2a2a2a;
 }
 
+.note.pinned {
+    border-left: 4px solid gold;
+    background: #fff8dc;
+}
+
+.dark .note.pinned {
+    background: #3a3300;
+}
+
+.note h3 {
+    margin: 0;
+}
+
 .note small {
     color: gray;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.note a {
+    display: inline-block;
+    margin-top: 5px;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.note a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   NOTE ACTIONS
+================================ */
+.actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.actions button {
+    font-size: 0.85rem;
 }
 
 .edit {
@@ -101,4 +168,15 @@ button {
 .delete {
     background: red;
     color: white;
+}
+
+/* ===============================
+   DARK MODE FIXES
+================================ */
+.dark input,
+.dark textarea,
+.dark select {
+    background: #333;
+    color: white;
+    border: 1px solid #444;
 }

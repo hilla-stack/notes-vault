@@ -26,20 +26,38 @@
         </div>
     </header>
 
+    <!-- SEARCH -->
     <input type="text" id="search" placeholder="Search notes..." onkeyup="searchNotes()">
 
+    <!-- NEW: CATEGORY FILTER -->
+    <select id="categoryFilter" onchange="filterNotes()">
+        <option value="all">All Categories</option>
+        <option value="General">General</option>
+        <option value="School">School</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+    </select>
+
+    <!-- NOTE FORM -->
     <div class="note-form">
         <input type="text" id="title" placeholder="Note title">
+
         <select id="category">
             <option>General</option>
             <option>School</option>
             <option>Work</option>
             <option>Personal</option>
         </select>
+
         <textarea id="content" placeholder="Write your note..."></textarea>
+
+        <!-- NEW: FILE UPLOAD -->
+        <input type="file" id="fileInput">
+
         <button onclick="saveNote()">Save Note</button>
     </div>
 
+    <!-- NOTES -->
     <div id="notes" class="notes-container"></div>
 </div>
 
